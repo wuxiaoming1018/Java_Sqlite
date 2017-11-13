@@ -42,7 +42,7 @@ public class WriteToSqlite {
 				String lineTextString = null;
 				String[] spliteStrings;
 				long startTime = System.currentTimeMillis();
-				buReader.readLine();//È¥µôµÚÒ»ĞĞ
+				buReader.readLine();//å»æ‰ç¬¬ä¸€è¡Œ
 				int code;
 				while ((lineTextString = buReader.readLine()) != null) {
 					spliteStrings = lineTextString.split("\\s+");
@@ -71,7 +71,7 @@ public class WriteToSqlite {
 				long endTime = System.currentTimeMillis();
 				long minute = (endTime - startTime) / 1000 / 60;
 				long second = (endTime - startTime) / 1000 % 60;
-				System.out.println("¶ÁÈ¡ÎÄ¼ş×Ü¹²ºÄÊ±:" + minute + "·ÖÖÓ£¬" + second + "Ãë");
+				System.out.println("è¯»å–æ–‡ä»¶æ€»è€—æ—¶:" + minute + "åˆ†" + second + "ç§’");
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

@@ -16,7 +16,7 @@ public class SqliteUtil {
 	public static String url;
 
 	static {
-		// ¶ÁÈ¡ÅäÖÃĞÅÏ¢
+		// è¯»å–é…ç½®ä¿¡æ¯
 		try {
 			Properties properties = new Properties();
 			InputStream isStream = new FileInputStream("src/db.properties");
@@ -24,7 +24,7 @@ public class SqliteUtil {
 			isStream.close();
 			driver = properties.getProperty("driver");
 			url = properties.getProperty("url");
-			// ×¢²áÇı¶¯
+			// æ³¨å†Œé©±åŠ¨
 			Class.forName(driver);
 		} catch (Exception e) {
 			// TODO: handle exception

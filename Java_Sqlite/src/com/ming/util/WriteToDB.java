@@ -28,16 +28,14 @@ public class WriteToDB {
 			mPreparedStatement.setString(13, delete(spliteStrings[13]));
 			mPreparedStatement.addBatch();
 			connection.commit();
-			if (count % 10000 == 0) {// Ò»Íò´ÎÖ´ĞĞÒ»´Î²åÈë²Ù×÷
+			if (count % 10000 == 0) {// è¯»å–ä¸€ä¸‡æ¬¡æ’å…¥ä¸€æ¬¡
 				mPreparedStatement.executeBatch();
 				connection.commit();
-				// System.out.println("Êı¾İ¿â²åÈë²Ù×÷Ö´ĞĞÁË" + index + "´Î,Ã¿´ÎÒ»ÍòÌõÊı¾İ");
 				mPreparedStatement.clearBatch();
 			}
 			if (index % 1000 == 0) {
 				mPreparedStatement.executeBatch();
 				connection.commit();
-				// System.out.println("Êı¾İ¿â²åÈë²Ù×÷Ö´ĞĞÁË" + index + "´Î,Ã¿´ÎÒ»ÍòÌõÊı¾İ");
 				mPreparedStatement.clearBatch();
 			}
 		} catch (Exception e1) {
@@ -48,13 +46,13 @@ public class WriteToDB {
 
 	private static String delete(String result) {
 		if (result == null || result.isEmpty()) {
-			result = "¿Õ";
+			result = "ï¿½ï¿½";
 		}
 		if (result.contains(";")) {
 			result = result.replace(";", "");
 		}
 		if (result.equals("[]")) {
-			result = "¿Õ";
+			result = "ï¿½ï¿½";
 		}
 		return result;
 

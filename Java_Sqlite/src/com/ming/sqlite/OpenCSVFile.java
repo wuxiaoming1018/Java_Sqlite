@@ -67,14 +67,14 @@ public class OpenCSVFile {
 				long endTime = System.currentTimeMillis();
 				long minute = (endTime - startTime) / 1000 / 60;
 				long second = (endTime - startTime) / 1000 % 60;
-				System.out.println("¶ÁÈ¡ÎÄ¼ş×Ü¹²ºÄÊ±:" + minute + "·ÖÖÓ," + second + "Ãë");
+				System.out.println("è¯»å–æ–‡ä»¶æ€»è€—æ—¶:" + minute + "åˆ†," + second + "ç§’");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());
 				e.printStackTrace();
 			}
 		} else {
-			System.out.println(filePath + "ÎÄ¼ş²»´æÔÚ");
+			System.out.println(filePath + "æ–‡ä»¶è·¯å¾„ä¸å­˜åœ¨");
 		}
 	}
 }
